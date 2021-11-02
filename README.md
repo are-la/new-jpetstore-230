@@ -10,19 +10,27 @@ CSU SE 2006 CM&amp;ZZT&amp;LYX Java Web
 
 ## 项目简介
 
+petstore
 
 ## 团队分工
 
-CM:
+CM: user
 
-ZZT:
+ZZT: cart
 
-LYX:
+LYX: log
 
 ## 团队日志
 
 2021.11.1 
-CM: 搭建项目框架，实现除购物车之外基本功能。
+
+ALL:搭建项目框架，实现除购物车之外基本功能。
+
+CM:创建repo，制定规范。
 
 2021.11.2
-CM: 创建repo，制定规范，确认项目分工。
+
+CM: 
+* 确认项目分工。
+* 实现购物车功能。
+
