@@ -1,0 +1,6 @@
+# output
+out/
+
+# 后缀为.class
+*.class
+
