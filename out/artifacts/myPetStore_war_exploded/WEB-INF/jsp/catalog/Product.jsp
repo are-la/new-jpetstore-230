@@ -24,16 +24,17 @@
                     <a href="viewItem?itemId=${item.itemId}">${item.itemId}</a>
                 </td>
                 <td>
-                        ${sessionScope.product.productId}
+                        ${item.product.productId}
                 </td>
-                <td>${item.attribute1} ${item.attribute2} ${item.attribute3}
+                <td>
+                        ${item.attribute1} ${item.attribute2} ${item.attribute3}
                         ${item.attribute4} ${item.attribute5} ${sessionScope.product.name}
                 </td>
                 <td>
                     <fmt:formatNumber value="${item.listPrice}" pattern="$#,##0.00"/>
                 </td>
                 <td>
-                    <a class="Button" href="#">Add to Cart</a>
+                    <a class="Button" href="addItemToCart?workingItemId=${item.itemId}">Add to Cart</a>
                 </td>
             </tr>
         </c:forEach>

@@ -56,4 +56,35 @@
         <servlet-name>SearchProductServlet</servlet-name>
         <url-pattern>/search</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddItemToCartServlet</servlet-name>
+        <servlet-class>org.mypetstore.web.servlets.AddItemToCartServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddItemToCartServlet</servlet-name>
+        <url-pattern>/addItemToCart</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ViewCartServlet</servlet-name>
+        <servlet-class>org.mypetstore.web.servlets.ViewCartServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ViewCartServlet</servlet-name>
+        <url-pattern>/viewCart</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RemoveItemFromCartServlet</servlet-name>
+        <servlet-class>org.mypetstore.web.servlets.RemoveItemFromCartServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RemoveItemFromCartServlet</servlet-name>
+        <url-pattern>/removeItemFromCart</url-pattern>
+    </servlet-mapping>
+
 </web-app>

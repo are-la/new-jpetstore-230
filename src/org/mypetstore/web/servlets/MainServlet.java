@@ -21,4 +21,5 @@ public class MainServlet extends javax.servlet.http.HttpServlet{
        // System.out.println("get 请求");
         req.getRequestDispatcher(MAIN).forward(req,resp);
     }
+
 }
