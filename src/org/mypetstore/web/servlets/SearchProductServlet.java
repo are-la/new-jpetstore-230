@@ -10,26 +10,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
 
 public class SearchProductServlet extends HttpServlet {
-    private static final String SEARCH = "/WEB-INF/jsp/catalog/SearchProducts.jsp";
-
-    private String productId;
-
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //    System.out.println("post 请求");
-        doGet(req,resp);
+    private String keyword;
+    private static final String View_Search_Product = "/WEB-INF/jsp/catalog/SearchProducts.jsp";
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doGet(request,response);
     }
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //    System.out.println("get 请求");
-        productId = req.getParameter("productId");
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        keyword = request.getParameter("keyword");
         CatalogService service = new CatalogService();
-        Product product = service.getProduct(productId);
-
-        HttpSession session = req.getSession();
-        session.setAttribute("product", product);
-        req.getRequestDispatcher(SEARCH).forward(req,resp);
+        List<Product> productList = service.searchProductList(keyword);
+        HttpSession session = request.getSession();
+        session.setAttribute("productList",productList);
+        request.getRequestDispatcher(View_Search_Product).forward(request,response);
     }
 }

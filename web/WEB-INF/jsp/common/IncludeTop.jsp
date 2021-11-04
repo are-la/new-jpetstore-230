@@ -39,21 +39,26 @@
 
   <div id="Menu">
     <div id="MenuContent">
-      <a href="viewCart"><img align="middle" name="img_cart"
-                              src="images/cart.gif"/></a> <img align="middle"
-                                                                        src="images/separator.gif"/> <a
-            href="../account/SignonForm.html">Sign In</a> <a href="#">Sign
-      Out</a> <img align="middle" src="images/separator.gif"/> <a
-            href="#">My Account</a> <img align="middle"
-                                         src="images/separator.gif"/> <a href="../help.html">?</a>
+      <c:if test="${sessionScope.account != null}">
+          <a href="viewCart">
+          <img align="middle" name="img_cart" src="images/cart.gif"/>
+          </a>
+      </c:if>
+        <img align="middle" src="images/separator.gif"/>
+        <c:if test="${sessionScope.account == null}"><a href="viewAccount?msg=logIn">Sign In</a></c:if>
+        <c:if test="${sessionScope.account != null}"><a href="signOut">Sign Out</a></c:if>
+        <img align="middle" src="images/separator.gif"/>
+        <c:if test="${sessionScope.account != null}"><a href="viewAccount?msg=Edit">My Account</a></c:if>
+        <c:if test="${sessionScope.account != null}"><img align="middle" src="images/separator.gif"/></c:if>
+        <a href="help.html">?</a>
     </div>
   </div>
 
   <div id="Search">
     <div id="SearchContent">
       <form action="search" method="post">
-        <input type="text" name="keyword" size="14"/> <input type="submit"
-                                                             name="searchProducts" value="Search"/>
+        <input type="text" name="keyword" size="14"/>
+          <input type="submit" name="searchProducts" value="Search"/>
       </form>
     </div>
   </div>

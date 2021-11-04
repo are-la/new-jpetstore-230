@@ -30,6 +30,19 @@ public class DBUtil {
     public static void closeConnection(Connection connection)throws Exception{
         connection.close();
     }
+    public static void closeAll(Connection conn, PreparedStatement ps, ResultSet rs){
+        try {
+            if(conn != null)
+                conn.close();
+            if(ps != null)
+                ps.close();
+            if (rs != null)
+                rs.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
 
 //    public static void main(String[] args) throws Exception{
 //        Connection conn = DBUtil.getConnection();

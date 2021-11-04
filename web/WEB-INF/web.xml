@@ -87,4 +87,63 @@
         <url-pattern>/removeItemFromCart</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>AccountLogInServlet</servlet-name>
+        <servlet-class>org.mypetstore.web.servlets.AccountLogInServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AccountLogInServlet</servlet-name>
+        <url-pattern>/logIn</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AccountRegisterServlet</servlet-name>
+        <servlet-class>org.mypetstore.web.servlets.AccountRegisterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AccountRegisterServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AccountSignOutServlet</servlet-name>
+        <servlet-class>org.mypetstore.web.servlets.AccountSignOutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AccountSignOutServlet</servlet-name>
+        <url-pattern>/signOut</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateUserInfoServlet</servlet-name>
+        <servlet-class>org.mypetstore.web.servlets.UpdateUserInfoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateUserInfoServlet</servlet-name>
+        <url-pattern>/updateUserInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ViewAccountServlet</servlet-name>
+        <servlet-class>org.mypetstore.web.servlets.ViewAccountServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ViewAccountServlet</servlet-name>
+        <url-pattern>/viewAccount</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UsernameIsExistServlet</servlet-name>
+        <servlet-class>org.mypetstore.web.servlets.UsernameIsExistServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UsernameIsExistServlet</servlet-name>
+        <url-pattern>/usernameIsExist</url-pattern>
+    </servlet-mapping>
 </web-app>
