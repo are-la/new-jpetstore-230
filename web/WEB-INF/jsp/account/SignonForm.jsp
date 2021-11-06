@@ -8,6 +8,14 @@
 	Password:
 		<input type="password" name="password" value="j2ee">
 	</p>
+		<p>
+			PIN:
+			<input type="text" name="checkPIN">
+			&nbsp;&nbsp;
+			<img src="validateCode">
+			&nbsp;
+			<a href=""viewAccount?msg=logIn">Change another one</a>
+		</p>
 		<input type="submit" value="login">
 
 	</form>
