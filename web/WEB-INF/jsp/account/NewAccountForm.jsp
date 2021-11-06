@@ -114,6 +114,16 @@
 				</td>
 			</tr>
 
+			<tr>
+				<td>PIN:</td>
+				<td>
+					<input type="text" name="checkPIN">
+				</td>
+			</tr>
+			<tr>
+				<td ><img src="validateCode"></td>
+				<td><a href="viewAccount?msg=New">Change another one</a></td>
+			</tr>
 		</table>
 
 
