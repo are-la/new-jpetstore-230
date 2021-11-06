@@ -38,7 +38,7 @@
 
 	<tr>
 		<td>
-			<a class="Button" href="addItemToCart?workingItemId=${item.itemId}">	Add to Cart</a>
+			<a class="Button" href="addItemToDCart?workingItemId=${item.itemId}">	Add to Cart</a>
 		</td>
 	</tr>
 </table>

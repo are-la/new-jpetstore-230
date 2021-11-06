@@ -13,7 +13,6 @@
     </div>
 
     <div id="Banner">
-        IncludeBottom.html
     </div>
 
 </div>

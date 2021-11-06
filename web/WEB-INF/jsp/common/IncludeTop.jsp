@@ -40,17 +40,23 @@
   <div id="Menu">
     <div id="MenuContent">
       <c:if test="${sessionScope.account != null}">
-          <a href="viewCart">
+          <a href="viewDCart">
           <img align="middle" name="img_cart" src="images/cart.gif"/>
           </a>
       </c:if>
-        <img align="middle" src="images/separator.gif"/>
+        <c:if test="${sessionScope.account != null}"><img align="middle" src="images/separator.gif"/></c:if>
         <c:if test="${sessionScope.account == null}"><a href="viewAccount?msg=logIn">Sign In</a></c:if>
+        <c:if test="${sessionScope.account != null}"><img align="middle" src="images/separator.gif"/></c:if>
         <c:if test="${sessionScope.account != null}"><a href="signOut">Sign Out</a></c:if>
-        <img align="middle" src="images/separator.gif"/>
+        <c:if test="${sessionScope.account != null}"><img align="middle" src="images/separator.gif"/></c:if>
         <c:if test="${sessionScope.account != null}"><a href="viewAccount?msg=Edit">My Account</a></c:if>
         <c:if test="${sessionScope.account != null}"><img align="middle" src="images/separator.gif"/></c:if>
-        <a href="help.html">?</a>
+        <c:if test="${sessionScope.account != null}"><a href="listOrders">My Order</a></c:if>
+        <img align="middle" src="images/separator.gif"/>
+        <c:if test="${sessionScope.account != null}"><a href="viewLog">My Log</a></c:if>
+
+        <c:if test="${sessionScope.account != null}"><img align="middle" src="images/separator.gif"/></c:if>
+        <a href="../help.html">?</a>
     </div>
   </div>
 

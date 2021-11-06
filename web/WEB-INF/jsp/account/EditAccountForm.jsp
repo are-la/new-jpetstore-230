@@ -64,8 +64,6 @@
 		<%@ include file="IncludeAccountFields.jsp"%>
 		<input type="submit" name= "editAccount" value="Save Account Information">
 	</form>
-	<a href="#">My Orders</a>
-	<a href="#">My Log</a>
 </div>
 
 <%@ include file="../common/IncludeBottom.jsp"%>

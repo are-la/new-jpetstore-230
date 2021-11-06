@@ -1,11 +1,11 @@
 package org.mypetstore.service;
 
-import org.mypetstore.domain.Category;
-import org.mypetstore.domain.Item;
-import org.mypetstore.domain.Product;
+import org.mypetstore.domain.*;
+import org.mypetstore.persistence.CartDAO;
 import org.mypetstore.persistence.CategoryDAO;
 import org.mypetstore.persistence.ItemDAO;
 import org.mypetstore.persistence.ProductDAO;
+import org.mypetstore.persistence.impl.CartDAOImpl;
 import org.mypetstore.persistence.impl.CategoryDAOImpl;
 import org.mypetstore.persistence.impl.ItemDAOImpl;
 import org.mypetstore.persistence.impl.ProductDAOImpl;
@@ -16,10 +16,12 @@ public class CatalogService {
     private CategoryDAO categoryDAO;
     private ProductDAO productDAO;
     private ItemDAO itemDAO;
+    private CartDAO cartDAO;
     public CatalogService(){
         categoryDAO = new CategoryDAOImpl();
         productDAO = new ProductDAOImpl();
         itemDAO = new ItemDAOImpl();
+        cartDAO = new CartDAOImpl();
     }
 
     public List<Category> getCategoryList() {
@@ -54,6 +56,31 @@ public class CatalogService {
 
     public boolean isItemInStock(String itemId) {
         return itemDAO.getInventoryQuantity(itemId) > 0;
+    }
+
+    public Cart getCart(String username)
+    {
+        return cartDAO.getCart(username);
+    }
+
+    public void updateCart(Cart cart, Account account)
+    {
+        cartDAO.updateCart(cart,account);
+    }
+
+    public void addItemToCart(Account account,CartItem cartItem)
+    {
+        cartDAO.addItemToCart(account,cartItem);
+    }
+
+    public void removeCart(Account account)
+    {
+        cartDAO.removeCart(account);
+    }
+
+    public void removeItemFromCart(Account account, String itemId)
+    {
+        cartDAO.removeItemFromCart(account,itemId);
     }
 
 }

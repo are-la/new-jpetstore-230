@@ -56,18 +56,18 @@
 				</td>
 			</tr>
 		</c:forEach>
-		<tr>
-			<td colspan="7">
-			    <input type="submit" value="Update Cart">
-			</td>
-			<td>&nbsp;</td>
-		</tr>
+<%--		<tr>--%>
+<%--			<td colspan="7">--%>
+<%--			    <input type="submit" value="Update Cart">--%>
+<%--			</td>--%>
+<%--			<td>&nbsp;</td>--%>
+<%--		</tr>--%>
 	</table>
 
 	</form>
 		
 		<c:if test="${sessionScope.cart.numberOfItems > 0}">
-			<a href="#" class="Button">Proceed to Checkout</a>
+			<a href="newOrder" class="Button">Proceed to Checkout</a>
 </c:if></div>
 
 <%--<div id="MyList">--%>

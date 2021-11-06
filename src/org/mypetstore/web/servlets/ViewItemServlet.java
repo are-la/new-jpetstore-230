@@ -1,8 +1,10 @@
 package org.mypetstore.web.servlets;
 
+import org.mypetstore.domain.Account;
 import org.mypetstore.domain.Item;
 import org.mypetstore.domain.Product;
 import org.mypetstore.service.CatalogService;
+import org.mypetstore.service.LogService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,6 +18,8 @@ public class ViewItemServlet extends HttpServlet {
     private static final String VIEW_ITEM = "/WEB-INF/jsp/catalog/Item.jsp";
 
     private String itemId;
+    private LogService logService;
+    private Account account;
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //    System.out.println("post 请求");
@@ -31,6 +35,9 @@ public class ViewItemServlet extends HttpServlet {
 
         HttpSession session = req.getSession();
         session.setAttribute("item", item);
+        account = (Account) session.getAttribute("account");
+        logService = new LogService();
+        logService.insertBrowseLog(account,itemId);
         req.getRequestDispatcher(VIEW_ITEM).forward(req,resp);
     }
 }

@@ -58,23 +58,23 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>AddItemToCartServlet</servlet-name>
-        <servlet-class>org.mypetstore.web.servlets.AddItemToCartServlet</servlet-class>
+        <servlet-name>AddItemToDCartServlet</servlet-name>
+        <servlet-class>org.mypetstore.web.servlets.AddItemToDCartServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>AddItemToCartServlet</servlet-name>
-        <url-pattern>/addItemToCart</url-pattern>
+        <servlet-name>AddItemToDCartServlet</servlet-name>
+        <url-pattern>/addItemToDCart</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>ViewCartServlet</servlet-name>
-        <servlet-class>org.mypetstore.web.servlets.ViewCartServlet</servlet-class>
+        <servlet-name>ViewDCartServlet</servlet-name>
+        <servlet-class>org.mypetstore.web.servlets.ViewDCartServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>ViewCartServlet</servlet-name>
-        <url-pattern>/viewCart</url-pattern>
+        <servlet-name>ViewDCartServlet</servlet-name>
+        <url-pattern>/viewDCart</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -95,16 +95,6 @@
     <servlet-mapping>
         <servlet-name>AccountLogInServlet</servlet-name>
         <url-pattern>/logIn</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>AccountRegisterServlet</servlet-name>
-        <servlet-class>org.mypetstore.web.servlets.AccountRegisterServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>AccountRegisterServlet</servlet-name>
-        <url-pattern>/register</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -146,4 +136,65 @@
         <servlet-name>UsernameIsExistServlet</servlet-name>
         <url-pattern>/usernameIsExist</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ViewLogServlet</servlet-name>
+        <servlet-class>org.mypetstore.web.servlets.ViewLogServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ViewLogServlet</servlet-name>
+        <url-pattern>/viewLog</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>NewOrderServlet</servlet-name>
+        <servlet-class>org.mypetstore.web.servlets.NewOrderServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>NewOrderServlet</servlet-name>
+        <url-pattern>/newOrder</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ShipServlet</servlet-name>
+        <servlet-class>org.mypetstore.web.servlets.ShipServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShipServlet</servlet-name>
+        <url-pattern>/ship</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ConfirmOrderServlet</servlet-name>
+        <servlet-class>org.mypetstore.web.servlets.ConfirmOrderServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ConfirmOrderServlet</servlet-name>
+        <url-pattern>/confirmOrder</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ViewOrderServlet</servlet-name>
+        <servlet-class>org.mypetstore.web.servlets.ViewOrderServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ViewOrderServlet</servlet-name>
+        <url-pattern>/viewOrder</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ListOrdersServlet</servlet-name>
+        <servlet-class>org.mypetstore.web.servlets.ListOrdersServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ListOrdersServlet</servlet-name>
+        <url-pattern>/listOrders</url-pattern>
+    </servlet-mapping>
+
 </web-app>
