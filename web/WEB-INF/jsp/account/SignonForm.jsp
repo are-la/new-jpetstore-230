@@ -5,15 +5,19 @@
 	<p>${sessionScope.message}</p>
 	<p>Username:
 		<input type="text" name="username" value="j2ee">
+		<br>
+		<br>
 	Password:
 		<input type="password" name="password" value="j2ee">
-	</p>
-		<p>
+		<br>
+		<br>
 			PIN:
-			<input type="text" name="checkPIN">
-			&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" name="checkPIN">
+			<br>
+		    <br>
 			<img src="validateCode">
-			&nbsp;
+			&nbsp;&nbsp;&nbsp;
 			<a href=""viewAccount?msg=logIn">Change another one</a>
 		</p>
 		<input type="submit" value="login">
