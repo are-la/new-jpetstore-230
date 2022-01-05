@@ -11,9 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDAOImpl implements ProductDAO {
-    private static final String getProductListByCategoryString=" SELECT PRODUCTID, NAME, DESCN as description, CATEGORY as categoryId FROM PRODUCT WHERE CATEGORY = ?";
-    private static final String getProductString=" SELECT PRODUCTID, NAME, DESCN as description, CATEGORY as categoryId FROM PRODUCT WHERE PRODUCTID =?";
-    private static final String searchProductListString="select PRODUCTID, NAME, DESCN as description, CATEGORY as categoryId from PRODUCT WHERE lower(name) like ?";
+    private static final String getProductListByCategoryString=" SELECT PRODUCTID, NAME, DESCN AS DESCRIPTION, CATEGORY AS CATEGORYID FROM PRODUCT WHERE CATEGORY = ?";
+    private static final String getProductString=" SELECT PRODUCTID, NAME, DESCN AS DESCRIPTION, CATEGORY AS CATEGORYID FROM PRODUCT WHERE PRODUCTID =?";
+    private static final String searchProductListString="SELECT PRODUCTID, NAME, DESCN AS DESCRIPTION, CATEGORY AS CATEGORYID FROM PRODUCT WHERE LOWER(NAME) LIKE ?";
     @Override
     public List<Product> getProductListByCategory(String categoryId) {
         List<Product> products = new ArrayList<Product>();

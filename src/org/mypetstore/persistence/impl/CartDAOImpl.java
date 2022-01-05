@@ -15,11 +15,11 @@ import java.sql.ResultSet;
 
 public class CartDAOImpl implements CartDAO {
 
-    private static final String GetCart = "select itemId,quantity from cart where userId = ?";
-    private static final String AddItemToCart = "insert into cart (userId,itemId,quantity) values (?,?,?)";
-    private static final String DeleteCart = "delete from cart where userId = ?";
-    private static final String UpdateCart = "update cart set quantity = ? where userId = ? and itemId = ?";
-    private static final String RemoveItemFromCart = "delete from cart where userId = ? and itemId = ?";
+    private static final String GetCart = "SELECT ITEMID,QUANTITY FROM CART WHERE USERID = ?";
+    private static final String AddItemToCart = "INSERT INTO CART (USERID,ITEMID,QUANTITY) VALUES (?,?,?)";
+    private static final String DeleteCart = "DELETE FROM CART WHERE USERID = ?";
+    private static final String UpdateCart = "UPDATE CART SET QUANTITY = ? WHERE USERID = ? AND ITEMID = ?";
+    private static final String RemoveItemFromCart = "DELETE FROM CART WHERE USERID = ? AND ITEMID = ?";
     @Override
     public Cart getCart(String username) {
         Cart cart = null;

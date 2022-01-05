@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LineItemDAOImpl implements LineItemDAO {
-    private static final String GetLineItemsByOrderId = "SELECT ORDERID,LINENUM AS lineNumber,ITEMID,QUANTITY,UNITPRICE FROM LINEITEM WHERE ORDERID = ?";
+    private static final String GetLineItemsByOrderId = "SELECT ORDERID,LINENUM AS LINENUMBER,ITEMID,QUANTITY,UNITPRICE FROM LINEITEM WHERE ORDERID = ?";
     private static final String InsertLineItem = "INSERT INTO LINEITEM (ORDERID, LINENUM, ITEMID, QUANTITY, UNITPRICE) VALUES (?, ?, ?, ?, ?)";
     @Override
     public List<LineItem> getLineItemsByOrderId(int orderId) {

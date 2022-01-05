@@ -3,8 +3,12 @@
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../../../../Program Files/apache-tomcat-8.5.72/lib/jsp-api.jar!/" />
       <root url="jar://$PROJECT_DIR$/../../../../../Program Files/apache-tomcat-8.5.72/lib/servlet-api.jar!/" />
+      <root url="file://$PROJECT_DIR$/lib" />
+      <root url="file://$PROJECT_DIR$/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/lib" recursive="false" />
   </library>
 </component>

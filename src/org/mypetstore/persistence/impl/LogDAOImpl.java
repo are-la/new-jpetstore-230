@@ -14,13 +14,13 @@ import java.util.List;
 
 public class LogDAOImpl implements LogDAO {
 
-    private static final String InsertBrowseLog = "insert into browseLog (userId,browseItemId,browseTime) values (?,?,?)";
+    private static final String InsertBrowseLog = "INSERT INTO BROWSELOG (USERID,BROWSEITEMID,BROWSETIME) VALUES (?,?,?)";
 
-    private static final String InsertAddLog = "insert into addLog (userId,addItemId,addTime) values (?,?,?)";
+    private static final String InsertAddLog = "INSERT INTO ADDLOG (USERID,ADDITEMID,ADDTIME) VALUES (?,?,?)";
 
-    private static final String GetBrowseList = "select browseItemId,browseTime from browseLog where userId = ?";
+    private static final String GetBrowseList = "SELECT BROWSEITEMID,BROWSETIME FROM BROWSELOG WHERE USERID = ?";
 
-    private static final String GetAddList = "select addItemId,addTime from addLog where userId = ?";
+    private static final String GetAddList = "SELECT ADDITEMID,ADDTIME FROM ADDLOG WHERE USERID = ?";
 
 
     @Override

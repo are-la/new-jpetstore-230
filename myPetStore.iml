@@ -38,7 +38,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="jsp-api" level="project" />
+    <orderEntry type="library" exported="" name="jsp-api" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.5.72" level="application_server_libraries" />
     <orderEntry type="module-library">
       <library>
@@ -53,6 +53,15 @@
       <library>
         <CLASSES>
           <root url="jar://$USER_HOME$/Downloads/Compressed/stripes-1.6.0.jar/stripes-1.6.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/gson-2.8.9.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

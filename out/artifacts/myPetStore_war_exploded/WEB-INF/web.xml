@@ -197,4 +197,12 @@
         <url-pattern>/listOrders</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ValidateCodeServlet</servlet-name>
+        <servlet-class>org.mypetstore.web.servlets.ValidateCodeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ValidateCodeServlet</servlet-name>
+        <url-pattern>/validateCode</url-pattern>
+    </servlet-mapping>
 </web-app>

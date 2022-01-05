@@ -12,8 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryDAOImpl implements CategoryDAO {
-    private static final String GET_CATEGORY_LIST = "SELECT CATID AS categoryId, NAME, DESCN AS description FROM CATEGORY";
-    private static final String GET_CATEGORY = "SELECT CATID AS categoryId, NAME, DESCN AS description FROM CATEGORY WHERE CATID = ?";
+    private static final String GET_CATEGORY_LIST = "SELECT CATID AS CATEGORYID, NAME, DESCN AS DESCRIPTION FROM CATEGORY";
+    private static final String GET_CATEGORY = "SELECT CATID AS CATEGORYID, NAME, DESCN AS DESCRIPTION FROM CATEGORY WHERE CATID = ?";
     @Override
     public List<Category> getCategoryList() {
         List<Category> categoryList = new ArrayList<Category>();
