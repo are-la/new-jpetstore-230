@@ -67,9 +67,9 @@
                 this.isOpen = true;
             },
             setResult(name) {
-                console.log(name)
                 this.keyword = name;
                 this.isOpen = false;
+                this.$el.submit();
                 this.click = true;
             },
             onArrowDown() {
