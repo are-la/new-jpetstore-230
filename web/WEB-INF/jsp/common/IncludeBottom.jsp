@@ -16,9 +16,11 @@
     </div>
 
 </div>
+<%--使用vue可以简化绑定，并且显示候选框时较容易 --%>
 <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 <script>
     var app = new Vue({
+        <%--将vue的作用域设在form里，el就是form，就可以呼叫submit --%>
         el: '#SearchBox',
         data: {
             click: null,
@@ -48,9 +50,11 @@
             {
                 this.$el.submit();
             }
+            <%-- 由于vue的生命周期，它来不及替换就跳转了，浏览器submit.   设置一个click布尔值，点击后，改为true，等更新完之后再检查是否有click，若是有则再submit--%>
         },
         methods: {
             getProducts() {
+                <%--网址参数 ？product=value前端传入    fetch api 在js脚本中发出http请求 --%>
                 fetch("/searchapi?product="+this.keyword).then(res => res.json())
                 .then(data => {
                     console.log(data)
