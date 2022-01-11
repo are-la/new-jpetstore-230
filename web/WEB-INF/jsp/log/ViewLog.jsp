@@ -4,11 +4,11 @@
     <a href="main">Return to Mains</a>
 </div>
 
-<div id="Catalog">
+<div id="Catalog" style="padding: 10px 320px">
 
     <h2><br>My Browse Log</h2>
 
-    <table>
+    <table class="table table-hover">
         <tr>
             <th>Item ID</th>
             <th>Time</th>
@@ -27,7 +27,7 @@
 
     <h2>My Add Item To Cart Log</h2>
 
-    <table>
+    <table class="table table-hover">
         <tr>
             <th>Item ID</th>
             <th>Time</th>

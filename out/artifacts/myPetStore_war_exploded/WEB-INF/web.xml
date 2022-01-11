@@ -6,7 +6,7 @@
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
-    
+
     <servlet>
         <servlet-name>MainServlet</servlet-name>
         <servlet-class>org.mypetstore.web.servlets.MainServlet</servlet-class>
@@ -21,7 +21,7 @@
         <servlet-name>ViewCatagoryServlet</servlet-name>
         <url-pattern>/viewCategory</url-pattern>
     </servlet-mapping>
-    
+
     <servlet-mapping>
         <servlet-name>MainServlet</servlet-name>
         <url-pattern>/main</url-pattern>
@@ -204,5 +204,14 @@
     <servlet-mapping>
         <servlet-name>ValidateCodeServlet</servlet-name>
         <url-pattern>/validateCode</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CheckPINServlet</servlet-name>
+        <servlet-class>org.mypetstore.web.servlets.CheckPINServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckPINServlet</servlet-name>
+        <url-pattern>/checkPIN</url-pattern>
     </servlet-mapping>
 </web-app>

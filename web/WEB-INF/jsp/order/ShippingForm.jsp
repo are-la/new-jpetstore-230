@@ -1,10 +1,10 @@
 <%@ include file="../common/IncludeTop.jsp"%>
 <section>
-	<div id="Catalog">
+	<div id="Catalog" style="padding: 10px 320px">
 
 		<div>
 			<form action="ship" method="post">
-				<table>
+				<table class="table table-hover">
 					<tr>
 						<th colspan=2>Shipping Address</th>
 					</tr>

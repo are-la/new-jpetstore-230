@@ -1,24 +1,34 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
   <title>Our JPetStore</title>
   <link rel="StyleSheet" href="css/jpetstore.css" type="text/css" media="screen"/>
+  <script src="js/TweenMax.js"> </script>
+  <script src="js/TweenMax.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/button.js"></script>
 </head>
 
 <body>
+<img id="background" src="images/background1.jfif" alt="background"/>
+<img id="bg" src="images/background1.jfif" alt="background"/>
+
 <div id="Content">
-  <h2 >Welcome to our JPetStore</h2>
+  <br>
+  <br>
+  <h1 style="text-align: center" backgroudcolor="black" >Welcome to our JPetStore</h1>
 
-  <p><a href="/main">Enter the Store</a></p>
+  <div class="enter_button">
+    <p onclick="buttonChange()">Enter the Store</p>
+  </div>
 
-  <p style="text-align:center;" >
+  <p id="our_github">
     Our github_repo_url:
     <a href="https://github.com/are-la/new-jpetstore-230">https://github.com/are-la/new-jpetstore-230</a>
   </p>
-
 </div>
 </body>
 </html>

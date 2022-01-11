@@ -14,6 +14,9 @@
 <head>
     <link rel="StyleSheet" href="css/jpetstore.css" type="text/css"
           media="screen"/>
+    <script src="js/jquery.js"></script>
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <meta name="generator"
           content="HTML Tidy for Linux/x86 (vers 1st November 2002), see www.w3.org"/>
@@ -27,13 +30,13 @@
     <meta http-equiv="Pragma" content="no-cache"/>
     <style>
         #searchBox {
-            position: relative;<%--外部整体使用相对布局--%>
+            position: relative;
             display: inline-block;
         }
 
         .autocomplete-results {
             list-style: none;
-            position: absolute;<%--候选框采用绝对布局--%>
+            position: absolute;
             top: 75%;
             line-height: 1em;
             text-align: left;
@@ -72,7 +75,7 @@
 
     <div id="Logo">
         <div id="LogoContent">
-            <a href="main"><img src="images/logo-topbar.gif"/></a>
+            <a href="main"><img src="images/ourlogo.gif"/></a>
         </div>
     </div>
 
@@ -102,27 +105,28 @@
     <div id="Search">
         <div id="SearchContent">
             <form action="search" method="post" id="searchBox">
-                <input id="search-input" @keydown.down="onArrowDown"
-                       @keydown.up="onArrowUp"  <%--捕捉按键事件 判断是否选中——选中之后将框变蓝将字变白--%>
-                       @keydown.enter="onEnter" :value="keyword" v-model="keyword" v-on:input="changed"<%--用户输入时会触发一个函数——输入事件，每输入一次就发送一次请求--%>
-                       autocomplete="off" <%-- 把浏览器候选框禁用，否则将无法触发我们的候选框--%>
-                       placeholder="Input Product" type="text" name="keyword" size="14"/>
-                <ul
-                        v-show="isOpen" <%-- v-show去判定候选框什么时候出现--%>
-                        class="autocomplete-results"
-                >
-                    <li
-                            v-for="(product, i) in products"
-                            :key="i"
-                            @click="setResult(product.name)"
-                            class="autocomplete-result"
-                            :class="{ 'is-active': i === arrowCounter }"
+                <div class="form-inline">
+                    <input class="form-control" id="search-input" @keydown.down="onArrowDown"
+                           @keydown.up="onArrowUp"
+                           @keydown.enter="onEnter" :value="keyword" v-model="keyword" v-on:input="changed"
+                           autocomplete="off"
+                           placeholder="Input Product" type="text" name="keyword" size="14"/>
+                    <ul
+                            v-show="isOpen"
+                            class="autocomplete-results"
                     >
-                        {{ product.name }}
-                    </li>
-                </ul>
-                <input type="submit" name="searchProducts" value="Search"/>
-                <%--利用表单特性，按enter之后，VUE将候选框与框中内容进行替换，html进行submit --%>
+                        <li
+                                v-for="(product, i) in products"
+                                :key="i"
+                                @click="setResult(product.name)"
+                                class="autocomplete-result"
+                                :class="{ 'is-active': i === arrowCounter }"
+                        >
+                            {{ product.name }}
+                        </li>
+                    </ul>
+                    <input class="btn btn-info btn-sm" type="submit" name="searchProducts" value="Search"/>
+                </div>
             </form>
         </div>
     </div>

@@ -1,135 +1,89 @@
 <%@ include file="../common/IncludeTop.jsp"%>
 <script src="js/checkUsernameIsExist.js"></script>
-<div id="Catalog">
-	<form action="updateUserInfo?msg=New" method="post" name="registerForm">
-		<h3>User Information</h3>
-		<table>
-			<tr>
-				<td>User ID:</td>
-				<td>
-					<input type="text" name="username" onblur="usernameIsExist();"/>
-					<div id="usernameMsg"></div>
-				</td>
-			</tr>
-			<tr>
-				<td>New password:</td>
-				<td>
-					<input type="password" name="password"/>
-				</td>
-			</tr>
-			<tr>
-				<td>Repeat password:</td>
-				<td>
-					<input type="password" name="repeatPassword"/>
-				</td>
-			</tr>
+<script src="js/dynamicSecurityCode.js"></script>
+<div id="Catalog" style="padding: 0px 400px">
+	<form class="bs-example bs-example-form" action="updateUserInfo?msg=New" method="post" name="registerForm" onsubmit="return checkCode()">
+		<h4>User Information</h4>
+		<div class="input-group input-group-sm">
+			<span class="input-group-addon">User ID:</span>
+			<input type="text" class="form-control" name="username" onblur="usernameIsExist();"/>
+		</div>
+		<span id="usernameMsg"></span>
 
-			<tr>
-				<td>Email:</td>
-				<td>
-					<input type="text" name="email"/>
-				</td>
-			</tr>
+		<div class="input-group input-group-sm">
+			<span class="input-group-addon">New password:</span>
+			<input type="text" class="form-control" name="password"/>
+		</div>
 
-			<tr>
-				<td>Firstname:</td>
-				<td>
-					<input type="text" name="firstname"/>
-				</td>
-			</tr>
-
-			<tr>
-				<td>Lastname</td>
-				<td>
-					<input type="text" name="lastname"/>
-				</td>
-			</tr>
-
-			<tr>
-				<td>Address1:</td>
-				<td>
-					<input type="text" name="address1"/>
-				</td>
-			</tr>
-
-			<tr>
-				<td>Address2:</td>
-				<td>
-					<input type="text" name="address2"/>
-				</td>
-			</tr>
-
-			<tr>
-				<td>City:</td>
-				<td>
-					<input type="text" name="city"/>
-				</td>
-			</tr>
-
-			<tr>
-				<td>State:</td>
-				<td>
-					<input type="text" name="state"/>
-				</td>
-			</tr>
-
-			<tr>
-				<td>Country:</td>
-				<td>
-					<input type="text" name="country"/>
-				</td>
-			</tr>
-
-			<tr>
-				<td>Phone:</td>
-				<td>
-					<input type="text" name="phone"/>
-				</td>
-			</tr>
-
-			<tr>
-				<td>Status:</td>
-				<td>
-					<input type="text" name="status"/>
-				</td>
-			</tr>
-			<tr>
-				<td>Zip:</td>
-				<td>
-					<input type="text" name="zip"/>
-				</td>
-			</tr>
-
-			<tr>
-				<td>Prefered language</td>
-				<td>
-					<input type="text" name="langpref" value="english"/>
-				</td>
-			</tr>
-
-			<tr>
-				<td>Favoraite Category:</td>
-				<td>
-					<input type="text" name="favcategory" value="DOGS"/>
-				</td>
-			</tr>
-
-			<tr>
-				<td>PIN:</td>
-				<td>
-					<input type="text" name="checkPIN">
-				</td>
-			</tr>
-			<tr>
-				<td ><img src="validateCode"></td>
-				<td><a href="viewAccount?msg=New">Change another one</a></td>
-			</tr>
-		</table>
-
+		<div class="input-group input-group-sm">
+			<span class="input-group-addon">Repeat password:</span>
+			<input type="text" class="form-control" name="repeatPassword"/>
+		</div>
+		<div class="input-group input-group-sm">
+			<span class="input-group-addon">Email:</span>
+			<input type="text" class="form-control" name="email"/>
+		</div>
+		<div class="input-group input-group-sm">
+			<span class="input-group-addon">Firstname:</span>
+			<input type="text" class="form-control" name="firstname"/>
+		</div>
+		<div class="input-group input-group-sm">
+			<span class="input-group-addon">Lastname:</span>
+			<input type="text" class="form-control" name="lastname"/>
+		</div>
+		<div class="input-group input-group-sm">
+			<span class="input-group-addon">Address1:</span>
+			<input type="text" class="form-control" name="address1"/>
+		</div>
+		<div class="input-group input-group-sm">
+			<span class="input-group-addon">Address2:</span>
+			<input type="text" class="form-control" name="address2"/>
+		</div>
+		<div class="input-group input-group-sm">
+			<span class="input-group-addon">City:</span>
+			<input type="text" class="form-control" name="city"/>
+		</div>
+		<div class="input-group input-group-sm">
+			<span class="input-group-addon">State:</span>
+			<input type="text" class="form-control" name="state"/>
+		</div>
+		<div class="input-group input-group-sm">
+			<span class="input-group-addon">Country:</span>
+			<input type="text" class="form-control" name="country"/>
+		</div>
+		<div class="input-group input-group-sm">
+			<span class="input-group-addon">Phone:</span>
+			<input type="text" class="form-control" name="phone"/>
+		</div>
+		<div class="input-group input-group-sm">
+			<span class="input-group-addon">Status:</span>
+			<input type="text" class="form-control" name="status"/>
+		</div>
+		<div class="input-group input-group-sm">
+			<span class="input-group-addon">Zip:</span>
+			<input type="text" class="form-control" name="zip"/>
+		</div>
+		<div class="input-group input-group-sm">
+			<span class="input-group-addon">Prefered language: </span>
+			<input type="text" class="form-control" name="langpref" value="english"/>
+		</div>
+		<div class="input-group input-group-sm">
+			<span class="input-group-addon">Favoraite Category:</span>
+			<input type="text" class="form-control" name="favcategory" value="DOGS"/>
+		</div>
+		<div class="input-group input-group-sm">
+			<span class="input-group-addon">P  I  N    :</span>
+			<input type="text" class="form-control" name="checkPIN"/>
+		</div>
+		<span id="is_right"></span>
+		<img id="security" src="validateCode">
+		&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;<a href="javascript:dynamicSecurity();">Change to another one</a>
 
 		<%--		<%@ include file="IncludeAccountFields.jsp"%>--%>
+		<br>
 
-		<input type="submit" name="newAccount" value="Save Account Information"/>
+		<input class="btn btn-info btn-block active" type="submit" name="newAccount" value="Save Account Information"/>
 	</form>
 </div>
 

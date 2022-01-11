@@ -14,6 +14,9 @@
 <head>
     <link rel="StyleSheet" href="css/jpetstore.css" type="text/css"
           media="screen"/>
+    <script src="js/jquery.js"></script>
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <meta name="generator"
           content="HTML Tidy for Linux/x86 (vers 1st November 2002), see www.w3.org"/>
@@ -72,7 +75,7 @@
 
     <div id="Logo">
         <div id="LogoContent">
-            <a href="main"><img src="images/logo-topbar.gif"/></a>
+            <a href="main"><img src="images/ourlogo.gif"/></a>
         </div>
     </div>
 
@@ -102,26 +105,28 @@
     <div id="Search">
         <div id="SearchContent">
             <form action="search" method="post" id="searchBox">
-                <input id="search-input" @keydown.down="onArrowDown"
-                       @keydown.up="onArrowUp"
-                       @keydown.enter="onEnter" :value="keyword" v-model="keyword" v-on:input="changed"
-                       autocomplete="off"
-                       placeholder="Input Product" type="text" name="keyword" size="14"/>
-                <ul
-                        v-show="isOpen"
-                        class="autocomplete-results"
-                >
-                    <li
-                            v-for="(product, i) in products"
-                            :key="i"
-                            @click="setResult(product.name)"
-                            class="autocomplete-result"
-                            :class="{ 'is-active': i === arrowCounter }"
+                <div class="form-inline">
+                    <input class="form-control" id="search-input" @keydown.down="onArrowDown"
+                           @keydown.up="onArrowUp"
+                           @keydown.enter="onEnter" :value="keyword" v-model="keyword" v-on:input="changed"
+                           autocomplete="off"
+                           placeholder="Input Product" type="text" name="keyword" size="14"/>
+                    <ul
+                            v-show="isOpen"
+                            class="autocomplete-results"
                     >
-                        {{ product.name }}
-                    </li>
-                </ul>
-                <input type="submit" name="searchProducts" value="Search"/>
+                        <li
+                                v-for="(product, i) in products"
+                                :key="i"
+                                @click="setResult(product.name)"
+                                class="autocomplete-result"
+                                :class="{ 'is-active': i === arrowCounter }"
+                        >
+                            {{ product.name }}
+                        </li>
+                    </ul>
+                    <input class="btn btn-info btn-sm" type="submit" name="searchProducts" value="Search"/>
+                </div>
             </form>
         </div>
     </div>
