@@ -6,11 +6,11 @@
         to ${sessionScope.product.categoryId}</a>
 </div>
 
-<div id="Catalog">
+<div id="Catalog" style="padding: 10px 50px;">
 
     <h2>${sessionScope.product.name}</h2>
 
-    <table>
+    <table class="table table-hover">
         <tr>
             <th>Item ID</th>
             <th>Product ID</th>
