@@ -55,12 +55,14 @@ CM:
 
 ## Development environment setup
 
-## Requirements
+### Requirements
 
 - JDK 8+
 - Tomcat
 - MySQL
 - Intellij IDEA
+
+### Steps
 
 Install `Smart Tomcat` in IDEA and click edit Run Configuration, add a Tomcat configuration. The `Context Path` must be set to `/`.
 
