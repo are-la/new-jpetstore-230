@@ -1,6 +1,8 @@
 # output
-out/
+out/*
 
 # 后缀为.class
 *.class
 
+# preventing database password be committed
+src/org/mypetstore/persistence/DBUtil.java

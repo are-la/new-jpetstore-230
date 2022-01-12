@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class DBUtil {
     private static String driverString = "com.mysql.jdbc.Driver";
-    private static String connectionString = "jdbc:mysql://localhost:3306/myjpetstore";
+    private static String connectionString = "jdbc:mysql://localhost:3306/myjpetstore?useUnicode=true&characterEncoding=utf8";
     private static String username = "root";
     private static String password = "081123";
 

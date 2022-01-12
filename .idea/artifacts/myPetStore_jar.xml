@@ -3,10 +3,9 @@
     <output-path>$PROJECT_DIR$/out/artifacts/myPetStore_jar</output-path>
     <root id="archive" name="myPetStore.jar">
       <element id="module-output" name="myPetStore" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../Study Homeworks/Web/mysql-connector-java-5.1.0-bin.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../Program Files/apache-tomcat-8.5.72/lib/jsp-api.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../Program Files/apache-tomcat-8.5.72/lib/servlet-api.jar" path-in-jar="/" />
       <element id="library" level="project" name="jsp-api" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/servlet-api.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jsp-api.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
