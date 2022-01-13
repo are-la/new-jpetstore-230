@@ -93,6 +93,59 @@
             }
         }
     })
+
+    var app2 = new Vue({
+        el: "#MainImage",
+        data: {
+            left: 0,
+            top: 0,
+            show: false,
+            name: null,
+            products: [{"productId":"AV-CB-01","categoryId":"BIRDS","name":"Amazon Parrot","description":"\u003cimage src\u003d\"images/bird2.gif\"\u003eGreat companion for up to 75 years"},{"productId":"AV-SB-02","categoryId":"BIRDS","name":"Finch","description":"\u003cimage src\u003d\"images/bird1.gif\"\u003eGreat stress reliever"}]
+        },
+        mounted() {
+            // close menu when leaving the area
+            this.$el.addEventListener('mouseleave', this.handleMoveOutside);
+        },
+        computed: {
+            // get position of context menu
+            style() {
+                return {
+                    top: this.top + "px",
+                    left: this.left + "px"
+                };
+            }
+        },
+        methods: {
+            handleMoveOutside(event) {
+                this.close();
+            },
+            mouseMove(evt) {
+                this.left = evt.pageX;
+                this.top = evt.pageY;
+                this.show = true;
+            },
+            close() {
+                console.log("close")
+                this.show = false;
+                // this.top = 0;
+                // this.left = 0;
+                // this.products = [];
+            },
+            async getProducts() {
+                await fetch("/exhibitchapi?category="+this.name).then(res => res.json())
+                    .then(data => {
+                        // console.log(data)
+                        this.products = data;
+                    })
+            },
+            showMenu(category) {
+                this.name = category;
+                this.getProducts();
+                this.show = true;
+            }
+        }
+    });
 </script>
 </body>
 </html>

@@ -1,12 +1,12 @@
 <%@ include file="../common/IncludeTop.jsp" %>
 
 
-<div id="BackLink">
-    <a href="viewCategory?categoryId=${sessionScope.product.categoryId}">Return
-        to ${sessionScope.product.categoryId}</a>
+<div class="home-scrolldown">
+    <a href="viewCategory?categoryId=${sessionScope.product.categoryId}" class="scroll-icon smoothscroll">Return
+        to ${sessionScope.product.categoryId}-></a>
 </div>
 
-<div id="Catalog" style="padding: 10px 50px;">
+<div id="Catalog" style="padding: 10px 50px;height: 650px;">
 
     <h2>${sessionScope.product.name}</h2>
 
@@ -21,7 +21,7 @@
         <c:forEach var="item" items="${sessionScope.itemList}">
             <tr>
                 <td>
-                    <a href="viewItem?itemId=${item.itemId}" >${item.itemId}</a>
+                    <a href="viewItem?itemId=${item.itemId}">${item.itemId}</a>
                 </td>
                 <td>
                         ${item.product.productId}

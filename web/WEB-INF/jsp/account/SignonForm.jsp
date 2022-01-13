@@ -1,8 +1,8 @@
-<%@ include file="../common/IncludeTop.jsp"%>
+<%@ include file="../common/IncludeTop.jsp" %>
 <script src="js/jquery.js"></script>
 <script src="js/dynamicSecurityCode.js"></script>
 
-<div style="padding: 20px 400px ;">
+<div style="padding: 20px 400px ;height: 650px">
     <h5 class="text-center">${sessionScope.message}</h5>
     <br>
     <br>
@@ -13,15 +13,17 @@
             <span class="input-group-addon">Username:</span>
             <input type="text" class="form-control" name="username" value="j2ee" placeholder="Username">
         </div>
-        <br>
+        <br><br>
         <div class="input-group input-group-lg">
             <span class="input-group-addon">Password:</span>
-            <input maxlength="10px" type="password" class="form-control" name="password" value="j2ee" placeholder="Password">
+            <input maxlength="10px" type="password" class="form-control" name="password" value="j2ee"
+                   placeholder="Password">
         </div>
-        <br>
+        <br><br>
         <div class="input-group input-group-lg">
-            <span class="input-group-addon">PIN:</span>
-            <input type="text" class="form-control" id="checkPIN" name="checkPIN" onblur="checkCode()" placeholder="PIN">
+            <span class="input-group-addon">P I N :</span>
+            <input type="text" class="form-control" id="checkPIN" name="checkPIN" onblur="checkCode()"
+                   placeholder="PIN">
         </div>
         <span id="is_right"></span>
         <br>
@@ -38,5 +40,5 @@
     <a href="viewAccount?msg=New">Register Now!</a>
 </div>
 
-<%@ include file="../common/IncludeBottom.jsp"%>
+<%@ include file="../common/IncludeBottom.jsp" %>
 

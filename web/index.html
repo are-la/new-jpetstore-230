@@ -6,20 +6,19 @@
 <head>
   <title>Our JPetStore</title>
   <link rel="StyleSheet" href="css/jpetstore.css" type="text/css" media="screen"/>
-  <script src="js/TweenMax.js"> </script>
-  <script src="js/TweenMax.min.js"></script>
   <script src="js/jquery.js"></script>
   <script src="js/button.js"></script>
 </head>
 
 <body>
-<img id="background" src="images/background1.jfif" alt="background"/>
-<img id="bg" src="images/background1.jfif" alt="background"/>
+<img id="background" src="/images/wallhaven-45do17.jpg" alt="background"/>
 
-<div id="Content">
+<div id="Content2">
   <br>
   <br>
-  <h1 style="text-align: center" backgroudcolor="black" >Welcome to our JPetStore</h1>
+  <br>
+  <br>
+  <h1 id="txtDom" style="text-align: center" backgroudcolor="black" >Welcome to our JPetStore</h1>
 
   <div class="enter_button">
     <p onclick="buttonChange()">Enter the Store</p>
@@ -29,6 +28,56 @@
     Our github_repo_url:
     <a href="https://github.com/are-la/new-jpetstore-230">https://github.com/are-la/new-jpetstore-230</a>
   </p>
+
+  <script type="text/javascript">
+    var txtAnim = {
+      len: 0,
+      txtDom: "",
+      arrTxt: [],
+      init: function(obj) {
+        this.obj = obj;
+        this.txtDom = obj.innerHTML.replace(/\s+/g, "");
+        this.len = this.txtDom.length;
+        obj.innerHTML = "";
+        this.addDom();
+      },
+      addDom: function() {
+        for (var i = 0; i < this.len; i++) {
+          var spanDom = document.createElement("span");
+          spanDom.innerHTML = this.txtDom.substring(i, i + 1);
+          this.obj.appendChild(spanDom);
+          this.arrTxt.push(spanDom);
+        };
+        for (var j = 0; j < this.len; j++) {
+          this.arrTxt[j].style.position = "relative";
+        };
+        this.strat();
+      },
+      strat: function() {
+        for (var i = 0; i < this.len; i++) {
+          this.arrTxt[i].onmouseover = function() {
+            this.stop = 0;
+            this.speed = -1;
+            var $this = this;
+            this.timer = setInterval(function() {
+                      $this.stop += $this.speed; //0 += -1
+                      if ($this.stop <= -20) {
+                        $this.speed = 1;
+                      }
+                      $this.style.top = $this.stop + "px";
+                      if ($this.stop >= 0) {
+                        clearInterval($this.timer)
+                        $this.style.top = 0 + "px";
+                      };
+                    },
+                    15);
+          };
+        }
+      }
+    }
+    var txtDom = document.getElementById("txtDom");
+    txtAnim.init(txtDom);
+  </script>
 </div>
 </body>
 </html>
