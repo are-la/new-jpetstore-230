@@ -35,7 +35,6 @@ public class AccountService {
     accountDAO.updateAccount(account);
     accountDAO.updateSignon(account);
     accountDAO.updateProfile(account);
-
 //    if (account.getPassword() != null && account.getPassword().length() > 0) {
 //      accountDAO.updateSignon(account);
 //    }

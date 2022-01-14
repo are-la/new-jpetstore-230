@@ -4,7 +4,7 @@
     <a href="main" class="scroll-icon smoothscroll">Return to Main Menu-></a>
 </div>
 
-<div id="Catalog" style="height: 650px">
+<div id="Catalog" style="padding:10px 150px;height: 650px">
 
     <table class="table table-hover">
         <tr>

@@ -7,7 +7,6 @@
     <br>
     <br>
     <br>
-
     <form class="bs-example bs-example-form" role="form" method="post" action="logIn" onsubmit="return checkCode()">
         <div class="input-group input-group-lg">
             <span class="input-group-addon">Username:</span>

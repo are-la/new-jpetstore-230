@@ -74,7 +74,7 @@
 
 <header id="header">
     <div class="form-inline" id="MyMenu">
-        <nav class="navbar navbar-default" role="navigation">
+        <nav class="navbar navbar-default" role="navigation" style="background-color: #222222!important;">
             <div class="navbar-header">
                 <a class="navbar-brand" href="main">Our Jpetstore</a>
             </div>
@@ -190,4 +190,5 @@
             bird
         </a>
     </div>
+
 <%--<%@ include file="../common/IncludeBottom.jsp"%>--%>

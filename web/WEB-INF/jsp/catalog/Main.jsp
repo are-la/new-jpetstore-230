@@ -46,29 +46,29 @@
             <!-- 轮播（Carousel）项目 -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="/images/cat_small.png" style="width: 720px;height: 320px" alt="Cats"
+                    <img src="/images/background.gif" style="width: 730px;height: 330px" alt="Cats"
                          href="viewCategory?categoryId=CATS" v-on:mousemove="mouseMove"
-                         v-on:mouseenter="showMenu('cats')" v-on:mouseleave="close">
+                         v-on:mouseenter="showMenu('cats')" >
                 </div>
                 <div class="item">
-                    <img src="/images/mainback1.jpg" style="width: 720px;height: 320px" alt="Dogs"
+                    <img src="/images/mainback1.jpg" style="width: 730px;height: 330px" alt="Dogs"
                          href="viewCategory?categoryId=DOGS" v-on:mousemove="mouseMove"
-                         v-on:mouseenter="showMenu('dogs')" v-on:mouseleave="close">
+                         v-on:mouseenter="showMenu('dogs')" >
                 </div>
                 <div class="item">
-                    <img src="/images/bird.png" alt="Birds" style="width: 720px;height: 320px"
+                    <img src="/images/bird.png" alt="Birds" style="width: 730px;height: 330px"
                          href="viewCategory?categoryId=BIRDS" v-on:mousemove="mouseMove"
-                         v-on:mouseenter="showMenu('birds')" v-on:mouseleave="close">
+                         v-on:mouseenter="showMenu('birds')" >
                 </div>
                 <div class="item">
-                    <img src="/images/fish1.jpeg" alt="Fish" style="width: 720px;height: 320px"
+                    <img src="/images/fish1.jpeg" alt="Fish" style="width: 730px;height: 330px"
                          href="viewCategory?categoryId=FISH" v-on:mousemove="mouseMove"
-                         v-on:mouseenter="showMenu('fish')" v-on:mouseleave="close">
+                         v-on:mouseenter="showMenu('fish')" >
                 </div>
                 <div class="item">
-                    <img src="/images/reptiles1.jpeg" alt="Reptiles" style="width: 720px;height: 320px"
+                    <img src="/images/reptiles1.jpeg" alt="Reptiles" style="width: 730px;height: 330px"
                          href="viewCategory?categoryId=REPTILES" v-on:mousemove="mouseMove"
-                         v-on:mouseenter="showMenu('reptiles')" v-on:mouseleave="close">
+                         v-on:mouseenter="showMenu('reptiles')" >
                 </div>
             </div>
             <!-- 轮播（Carousel）导航 -->
@@ -94,7 +94,7 @@
 
 
     </div>
-    <div style="position: absolute;right: 270px;top:490px;width: 300px">
+    <div style="position: absolute;right: 220px;top:490px;width: 300px">
         <br>
         <h4 data-toggle="collapse" data-target="#demo_2">We can get the almost places in this word!</h4>
         <div id="demo_2" class="collapse">

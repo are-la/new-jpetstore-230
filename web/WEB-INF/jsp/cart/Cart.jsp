@@ -1,18 +1,9 @@
 <%@ include file="../common/IncludeTop.jsp"%>
 
 <script src="js/autoRefreshCart.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
 
-<!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
-<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
-
-<!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
-<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-<div id="BackLink">
-	<a href="main">Return to Main Menu</a>
+<div class="home-scrolldown">
+	<a href="main" class="scroll-icon smoothscroll">Return to Main Menu-></a>
 </div>
 
 <div id="Catalog">
@@ -24,14 +15,15 @@
 			<table style="vertical-align: middle; text-align: center">
 				<tr>
 					<th></th>
-					<th><b>Product Name</b></th>
-					<th><b>Description</b></th>
-					<th><b>In Stock?</b></th>
-					<th><b>Quantity</b></th>
-					<th><b>List Price</b></th>
-					<th><b>Total Cost</b></th>
-					<th>&nbsp;</th>
+					<th style="text-align: center"><b>Product Name</b></th>
+					<th style="text-align: center"><b>Description</b></th>
+					<th style="text-align: center"><b>In Stock?</b></th>
+					<th style="text-align: center"><b>Quantity</b></th>
+					<th style="text-align: center"><b>List Price</b></th>
+					<th style="text-align: center"><b>Total Cost</b></th>
+					<th style="text-align: center">&nbsp;</th>
 				</tr>
+
 
 				<c:if test="${sessionScope.cart.numberOfItems == 0}">
 					<tr>
