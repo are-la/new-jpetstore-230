@@ -53,3 +53,49 @@ CM:
 * 完成代码的融合
 * 调试并debug，解决项目现有的问题
 
+2022.1.12~2022.1.13
+CM：
+* 完成悬浮功能
+* 完成代码融合
+* 调试并debug 解决现有问题
+
+2022.1.14
+CM：
+* 总结一下环境配置方法
+## Development environment setup
+
+### Requirements
+
+- JDK 8+
+- Tomcat
+- MySQL
+- Intellij IDEA
+
+### Steps
+
+Install `Smart Tomcat` in IDEA and click edit Run Configuration, add a Tomcat configuration. The `Context Path` must be set to `/`.
+
+Note: If you're using Tomcat 9+, you may get `org.apache.jasper.JasperException` error. You can import JSTL module solve this problem by following this [answer](https://stackoverflow.com/a/4928309/9892882).
+The JSTL library for Tomcat 9 is also in the `lib` directory of the project. You can import them on Project Structure.
+
+Create a database names `myjpetstore` in MySQL Client.
+
+```mysql
+create database myjpetstore;
+```
+
+Import SQL to the database. The SQL file is in the project folder.
+
+```shell
+$ mysql -u root myjpetstore < myjpetstore.sql
+```
+
+Configure MySQL connection setting in `src/org/mypetstore/persistence/DBUtil.java`.
+
+```java
+private static String connectionString = "jdbc:mysql://localhost:3306/myjpetstore?useUnicode=true&characterEncoding=utf8";
+private static String username = "root";
+private static String password = "";
+```
+
+Now you can click the run button in the upper-right corner of the window to start the program. 
